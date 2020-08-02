@@ -1,0 +1,63 @@
+
+html {
+font-family: Roboto, sans-serif;
+}
+
+* {
+    color: #333333;
+}
+
+h1 {
+    color: #0000ff;
+    margin-bottom: 0.25em;
+}
+
+h2 {
+    color: #000000;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+h3 {
+    color: #0000ff;
+}
+
+a {
+    color: #0000ff;
+}
+
+section {
+    margin-bottom: 3em;
+}
+
+.cv {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contacts {
+    margin-bottom: 2em;
+}
+.contact {
+    display: flex;
+    margin-bottom: 0.25em;
+}
+
+.contact__type {
+    min-width: 90px;
+    }
+
+
+.expirience {
+    display: flex;
+    margin-bottom: 2em;
+}
+.expirience__date {
+    min-width: 185px;
+    margin-bottom: 1em;
+    }
+    
+.expirience__name {
+        font-weight: bold;
+    }
