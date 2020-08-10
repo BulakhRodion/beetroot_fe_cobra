@@ -23,31 +23,27 @@ body {
     align-items: center;
 }
 .stage {
-    position: relative;
-    max-width: 1200px;
+    max-width: 260px;
+    max-height: 300px;
+    height: 300px;
+    width: 225px;
     width: 100%;
     text-align: center;
 }
 .logo {
-    position: absolute;
-    top: 120px; left: 525px; right: 540px; bottom: 265px;
+    margin-bottom: 52px;
 }
 h1 {
     font-size: var(--title-size);
     color: var(--white);
-    position: absolute;
-    top: 210px; left: 505px; right: 500px; bottom: 205px;
-    justify-content: stretch;
+    margin-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
 }
 .separator {
-    position: absolute;
-    top: 240px; left: 470px; right: 470px; bottom: 180px;
-    
+    margin-bottom: 15px;
 }
 nav {
-    position: absolute;
-    top: 265px; left: 515px; right: 510px; bottom: 145px;  
+     margin-bottom: 86px;
 }
 nav li {
     display: inline;
@@ -63,8 +59,6 @@ a {
 footer {
     font-size: var(--footer-size);
     color: var(--white);
-    position: absolute;
-    top: 366px; left: 465px; right: 455px; bottom: 40px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
