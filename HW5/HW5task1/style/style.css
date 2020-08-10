@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400&display=swap');
+:root {
+    --main-text: #9D9D9D;
+    --icon: #2a69a6;
+    /* font-sizes */
+    --main-size: 14px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100vh;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+   display: flex;
+}
+article {
+    margin-right: 100px;
+}
+article:last-child {
+    margin-right: 0px;
+}
+.first, .second, .third {
+    margin-bottom: 16px;
+    width: 220px;
+    height: 168px;
+}
+.third {
+    margin-bottom: 0px;
+}
+.ficon, .sicon, .ticon {
+    border: 1px solid var(--icon);
+    border-radius: 50%;
+    height: 64px;
+    width: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .2s ease;
+    margin-left: 76px;
+    margin-bottom: 20px;
+}
+.ficon:hover, .sicon:hover, .ticon:hover {
+    background-color: var(--icon);
+}
+.settings, .dashboard, .tablet {
+    fill: var(--icon);
+    transition: fill .2s ease;
+}
+.settings:hover, .dashboard:hover, .tablet:hover {
+    fill: white;
+}
+h2 {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 22px;
+    font-family: 'Recursive', sans-serif;
+}
+p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--main-text);
+    height: 52px;
+}
