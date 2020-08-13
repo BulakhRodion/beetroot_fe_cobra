@@ -31,22 +31,32 @@ body {
     text-align: center;
 }
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 52px;
+}
+.logo a {
+    display: block;
+    height: 37px;
+    width: 112px;
 }
 h1 {
     font-size: var(--title-size);
     color: var(--white);
-    margin-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
 }
-.separator {
-    margin-bottom: 15px;
+h1::after {
+    content: "";
+    border-bottom:  2px solid white;
+    display: block;
+    margin: 20px auto;
 }
 nav {
-     margin-bottom: 86px;
+     margin-bottom: 86px;     
 }
 nav li {
-    display: inline;
+    display: inline-block;
     text-decoration-style: none;
     padding-right: 25px;
 }
@@ -54,6 +64,8 @@ nav li:last-child {
     padding-right: 0;
 }
 a {
+    display: block;
+    height: 20px;
     text-decoration: none;
 }
 footer {
