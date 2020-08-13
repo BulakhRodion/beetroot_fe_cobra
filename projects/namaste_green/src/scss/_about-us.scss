@@ -1,0 +1,107 @@
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    &__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__top{
+        text-align: center;
+    }
+    &__subtitle {
+        font-size: $subtitle-size;
+        color: $subtitle-color;
+        font-family: $secondary-font;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    &__title {
+        font-size: $title-size;
+        color: $title-color;
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 40px;
+        letter-spacing: 4px;
+    }
+    &__tagline {
+        font-size: $tagline-size;
+        color: $tagline-color;
+        font-family: $main-font;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+        max-width: 520px;
+    }
+    &__main {
+        display: flex;
+    }
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+    &__list-item {
+        min-height: 420px;
+        width: 240px;
+        display: flex;
+        &:nth-child(2) {
+            .about-us__description-title {
+                margin-bottom: 15px;
+            }
+            .about-us__icon-wrapper {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-decoration: none;
+        height: 100%;
+        transition: 0.4s ease;
+        &:hover {
+            background-color: $hover-color;
+            .about-us__description-text, .about-us__description-title {
+                color: $hovericon-color;
+            }
+            .about-us__icon {
+                fill: $hovericon-color;
+            }
+        }   
+    } 
+    &__icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__icon {
+        text-align: center;
+        transition: 0.4s ease;
+    }
+    &__description-title {
+        font-size: $descriptiontitle-size;
+        color: $icon-color;
+        font-family: $secondary-font;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        text-align: center;
+        transition: 0.4s ease;  
+    }
+    &__description-text {
+        font-size: $text-size;
+        color: $descriptiontext-color;
+        font-family: $main-font;
+        font-weight: 400;
+        text-align: center;
+        transition: 0.4s ease;
+        margin: 0 30px 0 36px;
+    }
+}
