@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all .4s ease;
 }
 html, body {
     min-height: 100vh;
 }
 body {
     font-size: 100%;
+    background-color: $background-color;
+    border: 24px solid $border-color;
 }
