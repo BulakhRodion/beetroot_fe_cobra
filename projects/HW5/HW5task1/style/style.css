@@ -18,11 +18,14 @@ body {
     justify-content: center;
     align-items: center;
 }
-section {
-   display: flex;
+main {
+    display: flex;
+    width: 100%;
 }
-article {
-    margin-right: 100px;
+section {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 article:last-child {
     margin-right: 0px;
@@ -30,21 +33,24 @@ article:last-child {
 .first, .second, .third {
     display: flex;
     flex-direction: column;
-    width: 220px;
-    height: 168px;
+    justify-content: center;
+    align-items: center;
+    max-width: 220px;
+    min-height: 168px;
+    
 }
 
 .ficon, .sicon, .ticon {
     border: 1px solid var(--icon);
     border-radius: 50%;
-    height: 64px;
+    height: 66px;
     width: 66px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 24px;
     transition: background-color .2s ease;
-    margin-left: 76px;
-    margin-bottom: 20px;
+    
 }
 .ficon:hover, .sicon:hover, .ticon:hover {
     background-color: var(--icon);
