@@ -28,13 +28,12 @@ article:last-child {
     margin-right: 0px;
 }
 .first, .second, .third {
-    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
     width: 220px;
     height: 168px;
 }
-.third {
-    margin-bottom: 0px;
-}
+
 .ficon, .sicon, .ticon {
     border: 1px solid var(--icon);
     border-radius: 50%;
