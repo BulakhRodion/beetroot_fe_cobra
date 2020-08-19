@@ -36,11 +36,9 @@ article:last-child {
     justify-content: center;
     align-items: center;
     max-width: 220px;
-    min-height: 168px;
-    
+    min-height: 168px; 
 }
-
-.ficon, .sicon, .ticon {
+.service {
     border: 1px solid var(--icon);
     border-radius: 50%;
     height: 66px;
@@ -52,15 +50,15 @@ article:last-child {
     transition: background-color .2s ease;
     
 }
-.ficon:hover, .sicon:hover, .ticon:hover {
+.service:hover {
     background-color: var(--icon);
 }
-.settings, .dashboard, .tablet {
+.service:hover .icon {
+    fill: white;
+}
+.icon {
     fill: var(--icon);
     transition: fill .2s ease;
-}
-.settings:hover, .dashboard:hover, .tablet:hover {
-    fill: white;
 }
 h2 {
     font-size: 14px;

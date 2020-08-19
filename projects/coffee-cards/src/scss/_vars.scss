@@ -1,0 +1,41 @@
+@font-face {
+    font-family:"Miso-Bold";
+    src:url("../assets/fonts/MISO-BOL.eot") format("eot"),url("../assets/fonts/MISO-BOL.woff") format("woff"),url("../assets/fonts/MISO-BOL.ttf") format("truetype"),url("MISO-BOL.svg#Miso-Bold") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {	
+    font-family: 'Lato Light';
+	src: url('../assets/fonts/lato_light.eot'); /* IE 9 Compatibility Mode */
+	src: url('../assets/fonts/lato_light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../assets/fonts/lato_light.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../assets/fonts/lato_light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../assets/fonts/lato_light.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../assets/fonts/lato_light.svg#lato_light') format('svg'); /* Chrome < 4, Legacy iOS */
+        font-weight:normal;
+        font-style:normal;
+}
+    @font-face {
+        font-family: 'Miso-Reg';
+        src: url("../assets/fonts/Miso\ Regular.otf") format("opentype");
+}
+// colors
+$background-color: #CBBF73;
+$price-color: #02995B;
+$text-color: #333333;
+$bronzecup-color: #b9571c;
+$bronzesmoke-color: #b9835c;
+$goldcup-color: #cdae3c;
+$goldsmoke-color: #ba9d69;
+$silvercup-color: #98a59f;
+$silversmoke-color: #b3c0ba;
+$white: #fff;
+
+// fonts
+$main-font: 'Lato Light', sans-serif;
+$price-font: 'Miso-Bold', sans-serif;
+$cardrirle-font: 'Miso-Reg', sans-serif;
+
+// font-sizes
+$price-size: 56px;
+$text-size: 56px;
