@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100vh;
+    font-size: 100%;
+}
+body {
+    @include flex(center,center);
+}
+a {
+    @include flex(center,center);
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+    box-shadow: 0 4px 68px rgba(0, 0, 0, 0.1);
+}
