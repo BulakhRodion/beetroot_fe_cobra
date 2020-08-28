@@ -1,0 +1,130 @@
+$style: "introduction";
+.#{$style} {
+    @include flex(center,center,column);
+
+    padding-top: 108px;
+    padding-bottom: 54px;
+    &__title {
+        font-family: $main-font;
+        font-size: $title-size;
+        font-weight: 700;
+        color: $titles-color;
+        
+        text-transform: uppercase;
+        letter-spacing: 3px;
+
+        position: relative;
+
+        margin-bottom: 46px;
+        &::after {
+            content: "";
+            width: 41px;
+            height: 4px;
+            
+            background-color: #dddbdb;
+            
+            position: absolute;
+            bottom: -15px;
+            left: 106px;
+        }
+    }
+    &__sub-title {
+        max-width: 561px;
+
+        font-family: $main-font;
+        font-size: $sub-title-size;
+        font-weight: 300;
+        color: $titles-color;
+        
+        line-height: 21px;
+        text-align: center;
+        word-wrap: break-word;
+
+        margin-bottom: 52px;
+    }
+    &__list-firstlayer {
+        @include flex();
+        flex-wrap: wrap;
+
+        width: 100%;
+    }
+    &__list-item {
+        @include flex(flex-start, stretch, column);
+
+        margin-right: 27px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__image-wrapper {
+        display: flex;
+        max-height: fit-content;
+
+        min-height: 245px;
+        min-width: 245px;
+
+        position: relative;
+        
+        margin-bottom: 14px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__name {
+        font-family: $main-font;
+        @include text($name-size,700,$name-color);
+
+        letter-spacing: -1px;
+    }
+    &__position-name {
+        @include text($position-size,300,$position-color)
+    }
+    &__list-secondlayer {
+        @include flex();
+        flex-wrap: wrap;
+
+        width: 100%;
+    }
+    &__list-item-hover {
+        @include flex (center, center);
+
+        min-height: 245px;
+        min-width: 245px;
+
+        background-color: $hover-color;
+        opacity: 0.9;
+
+        margin-right: 27px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        @include flex(center,center);
+        
+        height: 42px;
+        width: 42px;
+        
+        color: $white;
+        background-color: rgba($color: $white, $alpha: 0.3);
+        text-decoration: none;
+        
+        margin-right: 4px;
+    
+        @include transition(background-color);
+        &:hover {
+            background-color: lighten($color: $hover-color, $amount: 5%);
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
