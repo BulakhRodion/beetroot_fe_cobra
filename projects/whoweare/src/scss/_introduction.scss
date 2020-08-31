@@ -2,6 +2,8 @@ $style: "introduction";
 .#{$style} {
     @include flex(center,center,column);
 
+    position: relative;
+
     padding-top: 108px;
     padding-bottom: 54px;
     &__title {
@@ -66,11 +68,12 @@ $style: "introduction";
         position: relative;
         
         margin-bottom: 14px;
+        @include transition(z-index);
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            
+
             position: absolute;
             top: 0;
             right: 0;
@@ -87,24 +90,21 @@ $style: "introduction";
     &__position-name {
         @include text($position-size,300,$position-color)
     }
-    &__list-secondlayer {
-        @include flex();
-        flex-wrap: wrap;
-
-        width: 100%;
-    }
-    &__list-item-hover {
+    &__link-wparrer {
         @include flex (center, center);
 
-        min-height: 245px;
-        min-width: 245px;
+        height: 100%;
+        width: 100%;
+        
+        opacity: 0;
 
+        position: absolute;
+        
         background-color: $hover-color;
-        opacity: 0.9;
-
-        margin-right: 27px;
-        &:last-child {
-            margin-right: 0;
+        @include transition(opacity);
+        &:hover {
+            z-index: 1;
+            opacity: 0.9;
         }
     }
     &__link {

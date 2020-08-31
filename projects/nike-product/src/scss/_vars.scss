@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Museo Sans Rounded 100";
+  src: url("//db.onlinewebfonts.com/t/cf2e520b1f09b1054a329a50e225ac01.eot");
+  src: url("//db.onlinewebfonts.com/t/cf2e520b1f09b1054a329a50e225ac01.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/cf2e520b1f09b1054a329a50e225ac01.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/cf2e520b1f09b1054a329a50e225ac01.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/cf2e520b1f09b1054a329a50e225ac01.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/cf2e520b1f09b1054a329a50e225ac01.svg#Museo Sans Rounded 100")
+      format("svg");
+}
+//font-sizes
+$name-size: 24px;
+$main-size: 14px;
+//colors
+$white: #fff;
+$black: #000;
+$background-color: #c5c5c8;
+$card-color: #111a28;
+$text-color: #e1e1e1;
+$first-product-color: #1f273f; 
+$third-product-color:  #ed3333;
+$fourth-product-color:  #29e3ea;
+$rating-color: #f7bf16;
