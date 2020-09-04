@@ -23,6 +23,9 @@
         &:nth-child(3n + 2) {
             margin-right: 0;
         }
+        &:nth-child(n + 3) {
+            margin-bottom: 50px;
+        }
     }
     &__image-wrapper {
         display: flex;
@@ -70,7 +73,7 @@
         
         background-color: white;
 
-        padding: 52px 16px 18px 24px;
+        padding: 22px 16px 18px 24px;
         &--large {
             height: 140px;
             width: 70%;
@@ -79,14 +82,16 @@
             bottom: 2px;
 
             padding: 16px 16px 16px 38px;
+        }
+        &--wo-title {
+            padding-top: 70px;
         }   
     }
     &__date {
-        position: absolute;
-        top: 22px;
-        
         font-size: 16px;
         opacity: 0.7;
+
+        margin-bottom: 30px;
         &--large {
             font-size: 13px;
             text-transform: uppercase;
@@ -106,7 +111,7 @@
         color: #1D1D1D;
         text-transform: uppercase;
         
-        margin-bottom: 59px;
+        margin-bottom: 44px;
         &--large {
             font-size: 28px;
             font-weight: 600;
@@ -125,9 +130,6 @@
         align-items: center;
 
         width: 100%;
-        min-height: 132px;
-        
-        padding: 10px;
     }
     &__load-iconwrapper {
         display: flex;

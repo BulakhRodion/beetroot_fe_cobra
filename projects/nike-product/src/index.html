@@ -8,6 +8,66 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<main>
+		<div class="container">
+			<div class="product-card">
+				<div class="product-card__col">
+					<div class="product-card__logo-wrapper">
+						<a href="/"><img class="product-card__logo" src="./img/logo.png" alt="logo"></a>
+					</div>
+					<div class="product-card__image-wrapper">
+						<img class="product-card__product-image" src="./img/nikeproduct.png" alt="product">
+					</div>
+	
+					<ul class="product-card__list">
+						<li class="product-card__list-item"></li>
+						<li class="product-card__list-item"></li>
+						<li class="product-card__list-item"></li>
+						<li class="product-card__list-item"></li>
+					</ul>
+				</div>
+				
+				<div class="product-card__col">
+					<div class="product-card__info">
+						<h2 class="product-card__title">Nike SB Stefan Janoski Max</h2>
+						<p class="product-card__subtitle"> Unisex Skateboarding Shoe</p>
+	
+						<ul class="product-card__list-rating">
+							<li class="product-card__list-item-rating">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="product-card__list-item-rating">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="product-card__list-item-rating">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="product-card__list-item-rating product-card__list-item-rating--grey">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="product-card__list-item-rating product-card__list-item-rating--grey">
+								<i class="fas fa-star"></i>
+							</li>
+						</ul>
+	
+						<form action="/" class="product-card__form">
+							<div class="product-card__select-wrapper">
+								<select name="Size" id="size" class="product-card__select">
+									<option value="1">Size</option>
+									<option value="2">2</option>
+								</select>
+								<select name="Qty" id="qty" class="product-card__select">
+									<option value="1">Qty</option>
+									<option value="2">2</option>
+								</select>
+							</div>
+							<button class="product-card__btn" type="submit">Add to cart</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
 	<script src="https://kit.fontawesome.com/adcbd3fc4f.js" crossorigin="anonymous"></script>
 	<script src="js/bundle.js"></script>
