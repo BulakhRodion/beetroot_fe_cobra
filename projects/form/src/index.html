@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<title>Sign-in</title>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="container">
+		<div class="sign-in">
+			<nav class="sign-in__nav">
+				<a href="#" class="sign-in__nav-item sign-in__nav-item--active" >Sign in</a>
+				<a href="#" class="sign-in__nav-item">Join us</a>
+			</nav>
+			<form action="/" class="sign-in__form">
+				<label for="username" class="sign-in__label">Username</label>
+				<input type="text" id="username" class="sign-in__input-text" minlength="3" required>
+				<label for="password" class="sign-in__label">Password</label>
+				<input type="password" id="password" class="sign-in__input-text" minlength="6" required>
+				
+				<div class="sign-in__checkbox-wrapper">
+					<input type="checkbox" name="checkbox" id="checkbox" class="sign-in__input-checkbox">
+					<label for="checkbox" class="sign-in__checkbox-label">Keep me signed in</label>
+				</div>
+				
+				<button type="submit" class="sign-in__btn">Sign in</button>
+			</form>
+			<div class="sign-in__link-wrapper">
+				<a href="#" class="sign-in__link">Forgot password</a>
+				<a href="#" class="sign-in__link">Create an account</a>
+			</div>
+		</div>
+	</section>
+	
+	<script src="js/bundle.js"></script>
+</body>
+</html>

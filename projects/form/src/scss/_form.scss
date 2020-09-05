@@ -1,0 +1,158 @@
+$style: "sign-in";
+.#{$style} {
+    @include flex(flex-start,flex-start,column);
+    min-height: 496px;
+    min-width: 400px;
+
+    box-shadow: 0 0 20px rgba(2, 41, 120, 0.1);
+    background-color: #166a6a;
+    background: linear-gradient(32deg, #3023ae 0%, #c86dd7 100%) no-repeat center;
+    background-size: cover;
+
+    position: relative;
+
+    padding: 48px 69px 49px 70px;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+
+        background: url('../img/bridge.png') no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        opacity: 0.2;
+        
+    }
+    &__nav {
+        @include flex();
+
+        margin-bottom: 48px;
+    }
+    &__nav-item {
+        @include text($head-size,700,$texthover-color);
+        font-family: $main-font;
+
+        margin-right: 26px;
+        @include transition(all 0.2s ease);
+        &:last-child {
+            margin-right: 0;
+        }
+        &--active {
+            padding-bottom: 4px;
+            color: $text-color;
+            border-bottom: 2px solid $headborder-color;
+        }
+        &:focus {
+            padding-bottom: 4px;
+            color: $text-color;
+            border-bottom: 2px solid $headborder-color;
+        }
+    }
+    &__form {
+        @include flex(flex-start,flex-start,column);
+    }
+    &__label {
+        @include text($label-size,700,$text-color);
+        font-family: $main-font;
+
+        cursor: pointer;
+
+        margin-bottom: 8px;
+    }
+    &__input-text {
+        width: 261px;
+        height: 42px;
+
+        outline: none;
+        background-color: inherit;
+        border: 2px solid rgba(191, 185, 204, 0.54);
+
+        padding: 6px;
+        margin-bottom: 14px;
+        &:last-of-type{
+            margin-bottom: 18px;
+        }
+        &:focus {
+            border: 2px solid rgba(126, 249, 255, 0.7);
+        }
+    }
+    &__checkbox-wrapper {
+        @include flex();
+
+        margin-bottom: 40px;
+    }
+    &__input-checkbox {
+        display: none;
+
+        &:checked + .sign-in__checkbox-label::before {
+            background-color: $btn-color;
+            border: 2px solid rgba($color: $btn-color, $alpha: 1.0);
+
+            background-image: url('../img/checked.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 75%;
+        }
+    }
+    &__checkbox-label {
+        @include text($small-size,700,$text-color);
+        font-family: $main-font;
+
+        cursor: pointer;
+        &::before {
+            content: '';
+            display: inline-block;
+
+            width: 12px;
+            height: 12px;
+
+            border: 2px solid rgba($color: $text-color, $alpha: 0.54);
+            background-color: inherit;
+            vertical-align: middle;
+
+            margin-right: 8px;
+            transition: 0.2s;
+        }
+    }
+    &__btn {
+        width: 261px;
+        height: 42px;
+        
+        outline: none;
+        border: none;
+        background-color: $btn-color;
+
+        @include text($btn-size,700,$text-color);
+        font-family: $main-font;
+        cursor: pointer;
+
+        @include transition(background-color);
+
+        margin-bottom: 30px;
+        &:hover {
+            background-color: lighten($color: $btn-color, $amount: 5%);
+        }
+    }
+    &__link-wrapper {
+        @include flex(space-between);
+        width: 100%;
+    }
+    &__link {
+        @include text($small-size,400,$bottom-text-color);
+        font-family: $secondary-font;
+
+        border-bottom: 1px solid rgba($color: $bottom-text-color, $alpha: 0.2);
+
+        padding-bottom: 5px;
+        transition: all 0.2s ease;
+        &:hover {
+            color: lighten($color: $bottom-text-color, $amount: 5%);
+            border-bottom: 1px solid lighten($color: $bottom-text-color, $amount: 5%);
+        }
+    }
+}
