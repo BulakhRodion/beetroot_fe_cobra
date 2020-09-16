@@ -1,0 +1,38 @@
+$style: "header";
+.#{$style} {
+    @include flex (center,center,column);
+    
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    &__logo-wrapper {
+        margin-bottom: 78px;
+    }
+    &__title {
+        @include text ($title-size,700,$white);
+
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 8.62px;
+
+        margin-bottom: 30px;
+    }
+    &__subtitle {
+        @include text ($subtitle-size,400,$white);
+
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 29px;
+        letter-spacing: 0.9px;
+    }
+    &__scroll-wrapper {
+        position: absolute;
+        bottom: 76px;
+    }
+}

@@ -1,0 +1,76 @@
+$style: "directions";
+.#{$style} {    
+    min-height: 100vh;
+    width: 100%;
+
+    padding: 80px 0;
+    &__text-wrapper {
+        @include flex (center,center,column);
+
+        width: 100%;
+        min-height: 1022px;
+
+        position: relative;
+
+        border-right: 2px solid $dark;
+        border-left: 2px solid $dark;
+        border-bottom: 2px solid $dark;
+
+        padding-top: 100px;
+        padding-bottom: 60px;
+        &::before {
+            content: " ";
+            position: absolute;
+
+            width: 25%;
+            background-color: $dark;
+            height: 2px;
+
+            left: 0;
+            top: 0;
+        }
+        &::after {
+            content: " ";
+            position: absolute;
+
+            width: 25%;
+            background-color: $dark;
+            height: 2px;
+
+            right: 0;
+            top: 0;
+        }
+    }
+    &__title {
+        @include text ($large-text,700,$dark);
+
+        position: absolute;
+        top: -20px;
+
+        text-transform: uppercase;
+        letter-spacing: 8.95px;
+    }
+    &__icon-wrapper {
+        margin-bottom: 30px;
+    }
+    &__name {
+        @include text ($small-titles,700,$dark);
+        
+        text-transform: uppercase;
+        letter-spacing: 5.26px;
+
+        margin-bottom: 20px;
+    }
+    &__text {
+        max-width: 546px;
+
+        @include text ($small-text,300,$dark);
+        line-height: 25.89px;
+        text-align: center;
+
+        margin-bottom: 80px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

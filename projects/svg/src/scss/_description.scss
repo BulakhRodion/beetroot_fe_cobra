@@ -1,0 +1,112 @@
+$style: "description";
+.#{$style} {
+    @include flex (flex-start,stretch,column);
+    text-align: center;
+
+    min-height: 100vh;
+    width: 100%;
+
+    &__part {
+        min-height: 50vh;
+        width:100%;
+
+        padding-top: 80px;
+    }
+    &__text-wrapper {
+
+        @include flex (center, center, column);
+        width:100%;
+        
+        position: relative;
+
+        border-right: 2px solid $dark;
+        border-left: 2px solid $dark;
+        border-bottom: 2px solid $dark;
+
+        padding-top: 70px;
+        padding-bottom: 50px;
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+
+            width: 25%;
+            background-color: $dark;
+            height: 2px;
+
+            left: 0;
+            top: 0;
+        }
+        &::after {
+            content: " ";
+            position: absolute;
+
+            width: 25%;
+            background-color: $dark;
+            height: 2px;
+
+            right: 0;
+            top: 0;
+        }
+        &--small {
+            border-right: 2px solid $white;
+            border-left: 2px solid $white;
+            border-bottom: 2px solid $white;
+            &::before {
+                content: " ";
+                position: absolute;
+                
+                width: 25%;
+                background-color: $white;
+                height: 2px;
+    
+                left: 0;
+                top: 0;
+            }
+            &::after {
+                content: " ";
+                position: absolute;
+    
+                width: 25%;
+                background-color: $white;
+                height: 2px;
+    
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+    &__part-title {
+        @include text ($large-text,700,$dark);
+        
+        text-transform: uppercase;
+        letter-spacing: 8.95px;
+
+        position: absolute;
+        top: -20px;
+        &--white {
+            color: $white;
+        }
+    }
+    &__text {
+        @include text ($medium-text,300,$dark);
+        max-width: 524px;
+
+        line-height: 24px;
+        &:nth-child(2) {
+            margin-bottom: 28px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &--white {
+            color: $white;
+        }
+    }
+    &__part-wrapper {
+        width: 100%;
+
+        background: url("../img/services-bg.png") no-repeat center;
+        object-fit: cover;
+    }
+}   

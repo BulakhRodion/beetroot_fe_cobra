@@ -1,0 +1,67 @@
+$style: "gallery";
+.#{$style} {
+    @include flex ();
+    min-width: 100%;
+    min-height: 50vh;
+
+    &__list {
+        @include flex (flex-start,stretch,row,wrap);
+
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &__list-item {
+        @include flex ();
+        max-width: calc(25% - 10px);
+        flex-basis: calc(25% - 10px); 
+        
+        position: relative;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        &--large {
+            max-width: 50%;
+            flex-basis: 50%;
+
+            position: relative;
+        }
+        &:nth-child(3n + 3) {
+            margin-right: 0;
+        }
+        &:nth-child(n + 4) {
+            margin-bottom: 0;
+        }
+    }
+    &__image-wrapper {
+        min-width: 100%;
+        
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            object-fit: cover;
+        }
+        &:hover .gallery__item-name{
+            transform: scale(1.1);
+            color: $dark;
+        }
+    }
+    &__item-name {
+        @include text ($large-text,700,$white);
+
+        text-transform: uppercase;
+        letter-spacing: 8.95px;
+
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+
+        transition: all 0.4s ease;
+    }
+}
