@@ -8,6 +8,9 @@ $style: "product-card";
     border-radius: 10px;
     
     padding: 24px 52px 21px 21px;
+    &__form {
+        @include flex ();
+    }
     &__col {
         @include flex(flex-start,flex-start,column);
         position: relative; 
@@ -34,7 +37,7 @@ $style: "product-card";
             pointer-events: none;
         }
     }
-    &__form {
+    &__bullets {
         @include flex (center,center);
         width: 100%;
     }
@@ -114,6 +117,8 @@ $style: "product-card";
         @include flex();
         flex: 1;
         width: 100%;
+
+        margin-bottom: 30px;
     }
     &__select {
         height: 32px;
@@ -130,7 +135,9 @@ $style: "product-card";
         
         padding: 0 6px;
         margin-right: 2px;
-        margin-bottom: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
     }
     &__btn {
         @include flex(center,center);

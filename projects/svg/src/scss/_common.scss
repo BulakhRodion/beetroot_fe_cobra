@@ -17,12 +17,17 @@ body {
 }
 a {
     display: block;
+    width: 100%;
+    height: 100%;
 
     text-decoration: none;
     color: inherit;
 }
 ul {
     list-style-type: none;
+}
+.description__text-wrap {
+    white-space: pre-line;
 }
 .container {
     @include flex (center,center,column);

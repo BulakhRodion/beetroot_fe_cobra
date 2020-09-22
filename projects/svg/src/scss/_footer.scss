@@ -1,12 +1,12 @@
 $style: 'footer';
 .#{$style} {
-    // @include flex (center,center);
     min-height: 50vh;
     width: 100%;
 
     position: relative;
 
     padding-top: 80px;
+    padding-bottom: 80px;
     &__text-wrapper {
         @include flex (center, center, column);
         width:100%;
@@ -93,6 +93,9 @@ $style: 'footer';
         bottom: 10px;
     }
     &__bottom-link {
+        display: block;
+        width: fit-content;
+        
         margin-right: 20px;
     }
     &__text-bottom {

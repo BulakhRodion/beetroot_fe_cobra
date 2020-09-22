@@ -90,8 +90,8 @@ $style: "description";
     }
     &__text {
         @include text ($medium-text,300,$dark);
-        max-width: 524px;
-
+        max-width: 522px;
+        
         line-height: 24px;
         &:nth-child(2) {
             margin-bottom: 28px;
