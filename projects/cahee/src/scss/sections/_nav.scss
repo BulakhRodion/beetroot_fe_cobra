@@ -1,0 +1,46 @@
+$style: 'navigation';
+.#{$style} {
+    @include flex (space-between, center);
+    height: 80px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    background-color: inherit;
+    &__logo {
+        @include text ($logo-size, 400, $dark-text-color);
+        font-family: $logo-font;
+        @include transition(color);
+        &:hover {
+      color: lighten($color: $dark-text-color, $amount: 25%);
+        }
+    }
+    &__list {
+        @include flex (flex-start,center);
+        height: 100%;
+    }
+    &__list-item {
+        @include flex (flex-start, flex-end);
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        @include text ($small-size, 700, $dark-text-color);
+        font-family: $main-font;
+
+        text-transform: uppercase;
+
+        padding-top: 18px;
+        border-top: 4px solid transparent;
+    @include transition(border-color);
+    &:hover {
+      border-top-color: $linkn1-color;
+    }
+  }  
+}

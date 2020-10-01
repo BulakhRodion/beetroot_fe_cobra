@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-size: 100%;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: $main-font;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+section {
+    width: 100%;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.text {
+    @include text ($text-size, 300, $dark-text-color);
+    &--white {
+        @include text ($text-size, 300, $white);
+    }
+}
+.title {
+    @include text ($titles-size, 700, $dark-text-color);
+    &--white {
+        @include text ($titles-size, 700, $white);
+    }
+}

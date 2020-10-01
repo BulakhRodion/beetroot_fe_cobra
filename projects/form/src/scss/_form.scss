@@ -33,15 +33,17 @@ $style: "sign-in";
 
         margin-bottom: 48px;
     }
-    &__nav-item {
-        @include text($head-size,700,$texthover-color);
-        font-family: $main-font;
-
+    &__nav-item-title {
         margin-right: 26px;
-        @include transition(all 0.2s ease);
         &:last-child {
             margin-right: 0;
         }
+    }
+    &__nav-item {
+        @include text($head-size, 700, $texthover-color);
+        font-family: $main-font;
+
+        @include transition(all 0.2s ease);
         &--active {
             padding-bottom: 4px;
             color: $text-color;

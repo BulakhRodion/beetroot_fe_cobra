@@ -1,0 +1,12 @@
+@import "./core/vars";
+@import "./core/mixins";
+@import "./core/common";
+
+@import "./sections/nav";
+
+//sections
+@import "./sections/header";
+@import "./sections/about-us";
+@import "./sections/services";
+@import "./sections/gallery";
+@import "./sections/subscribe";

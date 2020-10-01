@@ -1,0 +1,51 @@
+$style: 'subscribe';
+.#{$style} {
+    padding: 145px 0 160px;
+    background: url('../img/bgn2.png') no-repeat center;
+    background-size: cover;
+    &__title {
+        @include text ($subscribe-size, 700, $dark-text-color);
+        
+        margin-bottom: 34px;
+    }
+    &__text {
+        max-width: 542px;
+        
+        line-height: 1.6;
+
+        margin-bottom: 30px;
+    }
+    &__form {
+        @include flex ();
+    }
+    &__email {
+        width: 100%;
+        max-width: 572px;
+        height: 56px;
+
+        padding: 20px 16px;
+        margin-right: 28px;
+    }
+    &__submit {
+        width: 170px;
+        height: 56px;
+
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-color: $btnn1-color;
+        box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.7);
+        
+
+        @include text ($medium-size, 300, $white);
+        text-transform: uppercase;
+
+        @include transition (background-color);
+        &:hover {
+            background-color: darken($color: $btnn1-color, $amount: 10%);
+        }
+        &:active {
+            background-color: lighten($color: $btnn1-color, $amount: 10%);
+        }
+    }
+}

@@ -1,0 +1,79 @@
+$style: 'services';
+.#{$style} {
+    padding: 100px 0;
+    background-color: $third-bg-color;
+
+    &__container {
+    background-image: url('../img/imgn2.png');
+    background-repeat: no-repeat;
+    background-position: 95% 20%;  
+
+    padding: 80px 0;
+    }
+    &__row {
+        @include flex (center, center);
+    }
+    &__col {
+        @include flex (center, center, column);
+        width: 50%;
+        padding: 0 20px 0 0;
+        &:last-child {
+            padding: 0;
+        }
+    }
+    &__list {
+        @include flex (flex-start, stretch, column);
+    }
+    &__list-item {
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        
+        
+        background-color: $white;
+        box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+    
+        margin-bottom: 18px;
+        @include transition (background-color);
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            background-color: lighten($color: $third-bg-color, $amount: 20%);
+        }
+    }
+    &__link {
+        @include flex (flex-start, center);
+        
+        width: 100%;
+        height: 100%;
+        
+        text-align: center;
+        
+    }
+    &__link-text-wrapper {
+        @include flex (center,center);
+       
+        width: 75%;
+        height: 100%;
+
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 100px;
+            background-color: $after-color;
+            right: 0;
+        }
+    }
+    &__link-text {
+        @include text ($medium-size, 700, $dark-text-color);
+    }
+    &__link-img {
+        @include flex (center,center);
+        width: 25%;
+        height: 100%;
+    }
+}
+
