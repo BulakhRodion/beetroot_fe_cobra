@@ -1,0 +1,103 @@
+$style: 'blog';
+.#{$style} {
+    background-color: $six-bg-color;
+    padding: 100px 0 120px;
+    &__container {
+        @include flex (center,center,column);
+    }
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__text {
+        max-width: 565px;
+        text-align: center;
+
+        margin-bottom: 46px;
+    }
+    &__list {
+        @include flex (flex-start, stretch, row, wrap);
+        width: 100%;
+
+        margin-bottom: 48px;
+    }
+    &__list-item {
+        max-width: 32.1%;
+        flex-basis: 32.1%;
+
+        margin-right: 20px;
+
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        @include transition (transform);
+        &:nth-child(3n + 3) {
+            margin-right: 0;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    &__item-wrapper {
+        @include padding-hack (84.2%, cover);
+    }
+    &__item-link {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+    }
+    &__item-date {
+        @include flex (center, center, column);
+        height: 61px;
+        width: 61px;
+        
+        background-color: rgba($color: $dark-text-color, $alpha: 0.5);
+        border-radius: 8px;
+
+        position: absolute;
+        top: 30px;
+        left: 30px;
+
+        padding: 5px 8px 10px;
+    }
+    &__item-date-number {
+        @include text ($date-num-size, 700, $white);
+    }
+    &__item-date-month {
+        @include text ($date-mon-size, 900, $white);
+        text-transform: uppercase;
+    }
+    &__item-text-wrapper {
+        @include flex (flex-start, stretch, column);
+        max-width: 308px;
+        
+        position: absolute;
+        bottom: 24px;
+        left: 20px;
+    }
+    &__item-text {
+        @include text ($medium-size, 700, $white);
+        margin-bottom: 16px;
+    }
+    &__item-add-time {
+        @include text ($small-size, 300, $white);
+    }
+    &__btn {
+        height: 56px;
+        width: 200px;
+
+        @include text ($medium-size, 300, $white);
+        
+        outline: none;
+        border: none;
+        background-color: $linkn3-color;
+        cursor: pointer;
+        box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.7);
+
+        @include transition (background-color);
+        &:hover {
+            background-color: darken($linkn3-color, 10%);
+        }
+        &:active {
+            background-color: lighten($linkn3-color, 10%);
+        }
+    }
+}

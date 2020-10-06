@@ -18,16 +18,16 @@ $style: 'gallery';
     &__list {
         @include flex (center, center, row, wrap);
         width: 100%;
-        
+        margin-bottom: 28px;
     }
     &__list-item {
         max-width: calc(50% - 14px);
         flex-basis: calc(50% - 14px);
         margin-right: 28px;
         margin-bottom: 28px;
-        // &:nth-child(n + 3) {
-        //     margin-bottom: 0;
-        // }
+        &:nth-child(n + 3) {
+            margin-bottom: 0;
+        }
         &:nth-child(2n + 2) {
             margin-right: 0;
         }

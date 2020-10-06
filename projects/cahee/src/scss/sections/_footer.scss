@@ -1,0 +1,126 @@
+$style: 'footer';
+.#{$style} {
+    padding: 100px 0 140px;
+
+    position: relative;
+
+    background: url('../img/bgn3.png') no-repeat center;
+    background-size: cover;
+    &__container {
+        @include flex (center, center, column);
+        
+        margin-bottom: 48px;
+    }
+    &__text {
+        max-width: 346px;
+        
+        text-align: center;
+        margin-bottom: 46px;
+    }
+    &__row {
+        @include flex (space-between);
+        width: 100%;
+    }
+    &__col {
+        
+        width: 100%;
+        max-width: 50%;
+    }
+    &__form {
+        @include flex (center, flex-start, column);
+        width: 45%;
+    }
+    &__form-input {
+        width: 100%;
+        min-width: 300px;
+        max-width: 500px;
+        height: 50px;
+
+        resize: none;
+        outline: none;
+        border-top: inherit;
+        border-bottom: inherit;
+        border-right: inherit;
+        border-left: 6px solid rgba($second-bg-color, 0.1);
+        background-color: rgba($second-bg-color, 0.5);
+        
+        padding: 20px;
+        margin-bottom: 14px;
+        &::placeholder {
+            @include text (15px, 700, $white)
+        }
+        &:focus {
+            border-left: 6px solid $input-active;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &--big {
+            min-height: 250px;
+        }
+    }
+    &__btn {
+        width: 100%;
+        min-width: 300px;
+        max-width: 500px;
+        height: 50px;
+
+        border: none;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.7);
+        background-color: rgba($second-bg-color, 0.5);
+
+        @include text ($medium-size, 300, $white);
+        text-transform: uppercase;
+        @include transition (background-color);
+        &:hover {
+            background-color: darken(rgba($second-bg-color, 0.5), 10%);
+        }
+        &:active {
+            background-color: lighten(rgba($second-bg-color, 0.5), 5%);
+        }
+    }
+    &__contact-wrapper {
+        width: 43%;
+    }
+    &__contact-name {
+        margin-bottom: 4px;
+    }
+    &__contact-info {
+        margin-bottom: 10px;
+    }
+    &__bottom {
+        width: 100%;
+        height: 90px;
+
+        position: absolute;
+        bottom: 0;
+
+        background-color: $dark-text-color;
+    }
+    &__bottom-container {
+        @include flex (space-between, center);
+        height: 100%;
+    }
+    &__bottom-text {
+        @include text ($small-size, 300, $bottom-text);
+    }
+    &__bottom-word {
+        color: $linkn3-color;
+    }
+    &__bottom-link {
+        @include text ($logo-small-size, 400, $bottom-text);
+        font-family: $logo-font;
+
+        @include transition (color);
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+
+
+
+
