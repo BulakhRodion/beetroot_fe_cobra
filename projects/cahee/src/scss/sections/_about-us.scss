@@ -5,14 +5,21 @@ $style: 'about-us';
     position: relative;
     padding: 72px 0 70px;
     &__row {
-        @include flex ();
+        @include flex (center,stretch, column);
+        @media screen and (min-width: 500px) {
+            @include flex ();
+        }
     }
     &__col {
         @include flex (center, flex-start, column);
-        width: 50%;
-        &:last-child {
-            padding-left: 50px;
-        }
+        width: 100%;
+        @media screen and (min-width: 500px) {
+            width: 50%;
+            &:last-child {
+                padding-left: 50px;
+            }
+        }  
+        
     }
     &__img-wrapper {
         width: 100%;
@@ -20,6 +27,7 @@ $style: 'about-us';
     }
     &__title {
         margin-bottom: 34px;
+        
     }
     &__text {
         width: 100%;

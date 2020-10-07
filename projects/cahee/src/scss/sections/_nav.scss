@@ -19,8 +19,11 @@ $style: 'navigation';
         }
     }
     &__list {
-        @include flex (flex-start,center);
+        display: none;
         height: 100%;
+        @media screen and (min-width: 767px) {
+          @include flex (flex-start,center);
+        }
     }
     &__list-item {
         @include flex (flex-start, flex-end);
@@ -41,6 +44,39 @@ $style: 'navigation';
     @include transition(border-color);
     &:hover {
       border-top-color: $linkn1-color;
+    }
+  }
+  &__burger {
+    width: 30px;
+    height: 4px;
+
+    position: absolute;
+    right: 40px;
+    top: 50px;
+
+    background-color: $dark-text-color;
+    @media screen and (min-width: 767px) {
+      display: none;
+    }
+    &::before {
+      position: absolute;
+      top: 10px;
+      content: '';
+
+      width: 30px;
+      height: 4px;
+      background-color: $dark-text-color;
+
+    }
+    &::after {
+      position: absolute;
+      bottom: 10px;
+      content: '';
+
+      width: 30px;
+      height: 4px;
+      background-color: $dark-text-color;
+
     }
   }  
 }

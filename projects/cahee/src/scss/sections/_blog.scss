@@ -1,7 +1,10 @@
 $style: 'blog';
 .#{$style} {
     background-color: $six-bg-color;
-    padding: 100px 0 120px;
+    padding: 50px 0 60px;
+    @media screen and (min-width: 769px) {
+        padding: 100px 0 120px;
+    }
     &__container {
         @include flex (center,center,column);
     }
@@ -15,25 +18,54 @@ $style: 'blog';
         margin-bottom: 46px;
     }
     &__list {
-        @include flex (flex-start, stretch, row, wrap);
+        @include flex (center, stretch, row, wrap);
         width: 100%;
 
         margin-bottom: 48px;
+        @media screen and (min-width: 1111px) {
+            @include flex (flex-start, stretch, row, wrap);
+        }
     }
     &__list-item {
-        max-width: 32.1%;
-        flex-basis: 32.1%;
+        max-width: 100%;
+        flex-basis: 100%;
 
-        margin-right: 20px;
-
+        margin-bottom: 20px;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
         @include transition (transform);
-        &:nth-child(3n + 3) {
-            margin-right: 0;
+        @media screen and (min-width: 541px) {
+            max-width: calc(50% - 10px);
+            flex-basis: calc(50% - 10px);
+
+            margin-right: 20px;
+            margin-bottom: 0;
+            &:nth-child(4n + 2) {
+                margin-right: 0;
+            }
+            &:nth-child(n + 3) {
+                margin-top: 20px;
+            }
         }
-        &:hover {
-            transform: scale(1.05);
+        @media screen and (min-width: 800px) {   
+            &:hover {
+                transform: scale(1.05);
+            }
         }
+        @media screen and (min-width: 1111px) {
+            max-width: 32.1%;
+            flex-basis: 32.1%;
+
+            margin-right: 20px;
+            &:nth-child(n + 3) {
+                margin-top: 0px;
+            }
+            &:nth-child(3n + 3) {
+                margin-right: 0px;
+            }
+            &:nth-child(4n + 2) {
+                margin-right: 20px;
+            }
+        } 
     }
     &__item-wrapper {
         @include padding-hack (84.2%, cover);
@@ -76,25 +108,37 @@ $style: 'blog';
     &__item-text {
         @include text ($medium-size, 700, $white);
         margin-bottom: 16px;
+        @media screen and (min-width: 541px) and (max-width: 640px) {
+            @include text (18px, 700, $white);
+        }
+        @media screen and (min-width: 11px) and (max-width: 330px) {
+            @include text (18px, 700, $white);
+        }
     }
     &__item-add-time {
         @include text ($small-size, 300, $white);
     }
     &__btn {
         height: 56px;
-        width: 200px;
+        width: 100%;
 
         @include text ($medium-size, 300, $white);
         
         outline: none;
         border: none;
         background-color: $linkn3-color;
-        cursor: pointer;
+        
         box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.7);
 
         @include transition (background-color);
-        &:hover {
-            background-color: darken($linkn3-color, 10%);
+        @media screen and (min-width: 500px) {
+            width: 200px;
+        }
+        @media screen and (min-width: 800px) {
+            cursor: pointer;
+            &:hover {
+                background-color: darken($linkn3-color, 10%);
+            }
         }
         &:active {
             background-color: lighten($linkn3-color, 10%);

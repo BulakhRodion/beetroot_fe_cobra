@@ -1,22 +1,36 @@
 $style: 'services';
 .#{$style} {
-    padding: 100px 0;
+    padding: 0;
     background-color: $third-bg-color;
-
+    @media screen and (min-width: 800px) {
+        padding: 100px 0;
+    }
     &__container {
     background-image: url('../img/imgn2.png');
     background-repeat: no-repeat;
     background-position: 95% 20%;  
 
-    padding: 80px 0;
+    padding: 80px 15px;
     }
     &__row {
-        @include flex (center, center);
+        @include flex (center, center, column-reverse);
+        @media screen and (min-width: 800px) {
+            @include flex (center, center);
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+        @media screen and (min-width: 800px) {
+            margin-bottom: 0;
+        }
     }
     &__col {
         @include flex (center, center, column);
-        width: 50%;
-        padding: 0 20px 0 0;
+        width: 100%;
+        @media screen and (min-width: 800px) {
+            width: 50%;
+            padding: 0 20px 0 0;
+        }
         &:last-child {
             padding: 0;
         }
@@ -38,8 +52,10 @@ $style: 'services';
         &:last-child {
             margin-bottom: 0;
         }
-        &:hover {
-            background-color: lighten($color: $third-bg-color, $amount: 20%);
+        @media screen and (min-width: 800px) {
+            &:hover {
+                background-color: lighten($color: $third-bg-color, $amount: 20%);
+            }
         }
     }
     &__link {
