@@ -1,6 +1,6 @@
 $style: 'navigation';
 .#{$style} {
-    @include flex (space-between, center);
+    
     height: 80px;
 
     position: fixed;
@@ -9,13 +9,18 @@ $style: 'navigation';
     right: 0;
     z-index: 10;
 
-    background-color: inherit;
+    background-color: rgba(#F8F7Fa, 0.5);
+    &__container {
+      @include flex (space-between, center);
+    }
     &__logo {
         @include text ($logo-size, 400, $dark-text-color);
         font-family: $logo-font;
-        @include transition(color);
-        &:hover {
-      color: lighten($color: $dark-text-color, $amount: 25%);
+        @media screen and (min-width: 767px) {
+          @include transition(color);
+          &:hover {
+            color: lighten($color: $dark-text-color, $amount: 25%);
+          }
         }
     }
     &__list {
@@ -41,42 +46,42 @@ $style: 'navigation';
 
         padding-top: 18px;
         border-top: 4px solid transparent;
-    @include transition(border-color);
-    &:hover {
-      border-top-color: $linkn1-color;
+        @media screen and (min-width: 767px) {
+          @include transition(border-color);
+          &:hover {
+            border-top-color: $linkn1-color;
+          }
+        }
     }
-  }
-  &__burger {
-    width: 30px;
-    height: 4px;
+    &__burger {
+      width: 30px;
+      height: 4px;
 
-    position: absolute;
-    right: 40px;
-    top: 50px;
+      position: absolute;
+      right: 40px;
+      top: 50px;
 
-    background-color: $dark-text-color;
-    @media screen and (min-width: 767px) {
+      background-color: $dark-text-color;
+      @media screen and (min-width: 767px) {
       display: none;
-    }
-    &::before {
-      position: absolute;
-      top: 10px;
-      content: '';
+      }
+     &::before {
+        position: absolute;
+        top: 10px;
+       content: '';
 
-      width: 30px;
-      height: 4px;
-      background-color: $dark-text-color;
+       width: 30px;
+        height: 4px;
+       background-color: $dark-text-color;
+      }
+      &::after {
+       position: absolute;
+       bottom: 10px;
+       content: '';
 
-    }
-    &::after {
-      position: absolute;
-      bottom: 10px;
-      content: '';
-
-      width: 30px;
-      height: 4px;
-      background-color: $dark-text-color;
-
-    }
-  }  
+        width: 30px;
+       height: 4px;
+        background-color: $dark-text-color;
+      }
+    }  
 }

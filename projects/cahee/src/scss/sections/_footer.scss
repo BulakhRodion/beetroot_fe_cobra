@@ -6,6 +6,7 @@ $style: 'footer';
 
     background: url('../img/bgn3.png') no-repeat center;
     background-size: cover;
+    
     @media screen and (min-width: 600px) {
         padding: 100px 0 140px;
     }
@@ -56,13 +57,19 @@ $style: 'footer';
         border-left: 6px solid rgba($second-bg-color, 0.1);
         background-color: rgba($second-bg-color, 0.5);
         
+        @include text ($small-size, 700, $white);
+
         padding: 20px;
         margin-bottom: 14px;
         &::placeholder {
-            @include text (15px, 700, $white)
+            @include text (15px, 700, rgba($white, 0.5));
         }
         &:focus {
             border-left: 6px solid $input-active;
+            background-color: rgba($second-bg-color, 1);
+            &::placeholder {
+                @include text (15px, 700, rgba($white, 1));
+            }
         }
         &:last-child {
             margin-bottom: 0;
@@ -102,6 +109,10 @@ $style: 'footer';
             display: block;
             width: 43%;
             margin-bottom: 0;
+        }
+        a {
+            display: block;
+            width: fit-content;
         }
     }
     &__contact-name {
@@ -153,11 +164,11 @@ $style: 'footer';
         @include text ($medium-size, 400, $bottom-text);
         font-family: $logo-font;
 
-        @include transition (color);
         @media screen and (min-width: 600px) {
             @include text ($logo-small-size, 400, $bottom-text);
         }
         @media screen and (min-width: 800px) {
+            @include transition (color);
             &:hover {
                 color: $white;
             }

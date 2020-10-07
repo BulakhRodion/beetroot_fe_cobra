@@ -9,31 +9,33 @@
 </head>
 <body>
 	<!--nav-start-->
-	<nav class="navigation container">
-		<div class="navigation__logo-wrapper">
-			<a href="/" class="navigation__logo">Cahee</a>
+	<nav class="navigation">
+		<div class="navigation__container container">
+			<div class="navigation__logo-wrapper">
+				<a href="/" class="navigation__logo">Cahee</a>
+			</div>
+			<div class="navigation__burger"></div>
+			<ul class="navigation__list">
+				<li class="navigation__list-item">
+					<a href="#header" class="navigation__link">home</a>
+				</li>
+				<li class="navigation__list-item">
+					<a href="#about" class="navigation__link">about</a>
+				</li>
+				<li class="navigation__list-item">
+					<a href="#services" class="navigation__link">service</a>
+				</li>
+				<li class="navigation__list-item">
+					<a href="#gallery" class="navigation__link">gallery</a>
+				</li>
+				<li class="navigation__list-item">
+					<a href="#blog" class="navigation__link">blog</a>
+				</li>
+				<li class="navigation__list-item">
+					<a href="#contact" class="navigation__link">contact</a>
+				</li>
+			</ul>
 		</div>
-		<div class="navigation__burger"></div>
-		<ul class="navigation__list">
-			<li class="navigation__list-item">
-				<a href="#header" class="navigation__link">home</a>
-			</li>
-			<li class="navigation__list-item">
-				<a href="#about" class="navigation__link">about</a>
-			</li>
-			<li class="navigation__list-item">
-				<a href="#services" class="navigation__link">service</a>
-			</li>
-			<li class="navigation__list-item">
-				<a href="#gallery" class="navigation__link">gallery</a>
-			</li>
-			<li class="navigation__list-item">
-				<a href="#blog" class="navigation__link">blog</a>
-			</li>
-			<li class="navigation__list-item">
-				<a href="#contact" class="navigation__link">contact</a>
-			</li>
-		</ul>
 	</nav>
 	<!--nav-end-->
 
@@ -239,20 +241,19 @@
 			<p class="text footer__text">For new projects, ideas, business or anything
 				you'd like to discuss, contact with me!</p>
 			<div class="footer__row">
-				
 				<form action="#" class="footer__form">
 					<input type="text" class="footer__form-input" placeholder="Auskteez Tran">
 					<input type="text" class="footer__form-input" placeholder="Your email...">
 					<input type="text" class="footer__form-input" placeholder="Your phone number...">
 					<textarea  class="footer__form-input footer__form-input--big" placeholder="Your messge..."></textarea>
-					<button type="submit" class="footer__btn">submit</button>
+					<button type="submit" class="footer__btn" data-aos="fade-right" data-aos-duration="900">submit</button>
 				</form>
 				
 				<div class="footer__contact-wrapper">
-					<div class="footer__address-wrapper">
+					<a href="#" class="footer__address-link">
 						<h3 class="footer__contact-name">ADDRESS</h3>
 						<p class="footer__contact-info">123 City name, Street, City, Country</p>
-					</div>
+					</a>
 					<a href="mailto:example" class="footer__email-link">
 						<h3 class="footer__contact-name">EMAIL</h3>
 						<p class="footer__contact-info">cahee@domain.com</p>

@@ -3,6 +3,7 @@ $style: 'subscribe';
     padding: 100px 0 120px;
     background: url('../img/bgn2.png') no-repeat center;
     background-size: cover;
+    
     @media screen and (min-width: 700px) {
         padding: 145px 0 160px;
     }
@@ -58,14 +59,13 @@ $style: 'subscribe';
 
         @include text ($small-size, 300, $white);
         text-transform: uppercase;
-
-        @include transition (background-color);
         @media screen and (min-width: 500px) {
             width: 170px;
 
             @include text ($medium-size, 300, $white);
         }
         @media screen and (min-width: 800px) {
+            @include transition (background-color);
             cursor: pointer;
             &:hover {
                 background-color: darken($color: $btnn1-color, $amount: 10%);

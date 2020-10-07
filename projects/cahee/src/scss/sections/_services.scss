@@ -2,6 +2,7 @@ $style: 'services';
 .#{$style} {
     padding: 0;
     background-color: $third-bg-color;
+    
     @media screen and (min-width: 800px) {
         padding: 100px 0;
     }
@@ -48,12 +49,12 @@ $style: 'services';
         box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
     
         margin-bottom: 18px;
-        @include transition (background-color);
         &:last-child {
             margin-bottom: 0;
         }
         @media screen and (min-width: 800px) {
             &:hover {
+                @include transition (background-color);
                 background-color: lighten($color: $third-bg-color, $amount: 20%);
             }
         }
