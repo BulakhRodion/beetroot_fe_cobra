@@ -17,9 +17,8 @@ $style: 'navigation';
         @include text ($logo-size, 400, $dark-text-color);
         font-family: $logo-font;
         @media screen and (min-width: 767px) {
-          @include transition(color);
           &:hover {
-            color: lighten($color: $dark-text-color, $amount: 25%);
+            animation: rainbow 3s linear 0s infinite;
           }
         }
     }

@@ -56,7 +56,7 @@ $style: 'services';
             &:hover {
                 @include transition (background-color);
                 background-color: lighten($color: $third-bg-color, $amount: 20%);
-            }
+            } 
         }
     }
     &__link {
@@ -66,7 +66,13 @@ $style: 'services';
         height: 100%;
         
         text-align: center;
-        
+        @media screen and (min-width: 800px) {
+            &:hover > .services__link-img {
+                img {
+                    animation: spin 3s infinite;
+                }
+            }
+        }
     }
     &__link-text-wrapper {
         @include flex (center,center);

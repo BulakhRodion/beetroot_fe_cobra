@@ -168,9 +168,8 @@ $style: 'footer';
             @include text ($logo-small-size, 400, $bottom-text);
         }
         @media screen and (min-width: 800px) {
-            @include transition (color);
             &:hover {
-                color: $white;
+                animation: rainbow 3s linear 0s infinite;
             }
         }
     }

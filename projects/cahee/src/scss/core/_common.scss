@@ -11,6 +11,7 @@ html, body {
 body {
     font-family: $main-font;
     background-color: #F8F7Fa;
+    overflow-x: hidden;
 }
 ul {
     list-style: none;
@@ -45,6 +46,37 @@ section {
         text-align: center;
         @media screen and (min-width: 680px) {
             @include text ($titles-size, 700, $white);
+        }
+    }
+    @keyframes rainbow {
+        0%, 100% {
+            color: #FF0000;
+        }
+        16% {
+            color: #FF7F00;
+        }
+        32% {
+            color: #FFFF00;
+        }
+        46% {
+            color: #00FF00;
+        }
+        62% {
+            color: #0000FF;
+        }
+        78% {
+            color: #2E2B5F;
+        }
+        92% {
+            color: #8B00FF;
+        }
+    }
+    @keyframes spin {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(360deg);
         }
     }
 }
