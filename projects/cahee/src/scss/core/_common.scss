@@ -49,7 +49,7 @@ section {
         }
     }
     @keyframes rainbow {
-        0%, 100% {
+        0% {
             color: #FF0000;
         }
         16% {
@@ -69,6 +69,9 @@ section {
         }
         92% {
             color: #8B00FF;
+        }
+        100% {
+            color: #FF0000;
         }
     }
     @keyframes spin {
