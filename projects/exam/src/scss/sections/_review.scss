@@ -1,0 +1,43 @@
+$style: 'review';
+.#{$style} {
+    padding: 120px 0 100px;
+    
+    background: url('#{$img-path}/review-bckg.png') no-repeat center;
+    background-size: cover;
+    &__container {
+        @include flex (flex-start, center, column);
+    }
+    &__title {
+        margin-bottom: 94px;
+    }
+    &__row {
+        @include flex ();
+    }
+    &__col {
+        width: 40%;
+        &--second {
+            width: 60%;
+            padding: 48px 20px;
+            background-color: $dark-grey;
+        }
+    }
+    &__img-wrapper {
+        @include padding-hack (63.7%, contain);
+    }
+    &__name {
+        @include text ($H200, 400, $testimonials-color);
+
+        text-transform: uppercase;
+        line-height: 26px;
+
+        margin-bottom: 32px;
+    }
+    &__text {
+        @include text ($H60, 400, $light-grey);
+
+        line-height: 26px;
+    }
+    &__quote {
+        color: $main-color;   
+    }
+}

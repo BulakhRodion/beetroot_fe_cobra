@@ -1,0 +1,45 @@
+$style: 'footer';
+.#{$style} {
+    padding: 120px 0 50px;
+    background-color: $footer-bg;
+    &__container {
+        @include flex (center, center, column);
+    }
+    &__title {
+        @include text ($H240, 700, $white);
+
+        line-height: 26px;
+        text-transform: uppercase;
+        letter-spacing: 3.36px;
+
+        margin-bottom: 15px;
+        @include transition (color);
+        &:hover {
+            color: $hover-btn;
+        }
+    }
+    &__subtitle {
+        @include text ($H60, 400, $white);
+
+        letter-spacing: 0.8px;
+        line-height: 26px;
+
+        margin-bottom: 30px;
+    }
+    &__list {
+        @include flex ();
+    }
+    &__list-item {
+        margin-right: 24px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link-icon {
+        color: $white;
+        @include transition (color);
+        &:hover {
+            color: $hover-btn;
+        }
+    }
+}
