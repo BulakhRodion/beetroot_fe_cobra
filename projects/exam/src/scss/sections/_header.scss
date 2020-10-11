@@ -146,5 +146,9 @@ $style: 'header';
         
         text-transform: uppercase;
         line-height: 26px;
+        @include transition (color);
+        &:hover {
+            color: $dark-grey;
+        }
     }
 }
