@@ -17,12 +17,12 @@ $style: 'review';
         width: 40%;
         &--second {
             width: 60%;
-            padding: 48px 20px;
+            padding: 44px 20px;
             background-color: $dark-grey;
         }
     }
     &__img-wrapper {
-        @include padding-hack (63.7%, contain);
+        @include padding-hack (63.7%, cover);
     }
     &__name {
         @include text ($H200, 400, $testimonials-color);

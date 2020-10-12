@@ -41,13 +41,12 @@ $style: 'about-us';
         animation: spin 3s infinite;
     }
     &__img-wrapper {
-        display: flex;
+        width: 350px;
+        @include padding-hack (46.5%, contain);
         margin-bottom: 5px;
     &--end {
         align-self: flex-end;
-        }
-    }
-    &:last-child {
         margin-bottom: 0;
+        }
     }
 }

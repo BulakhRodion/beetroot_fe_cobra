@@ -1,20 +1,21 @@
 $style: 'booking-guide';
 .#{$style} {
-    padding: 100px 0 120px;
     background-color: $dark-grey;
-
-    position: relative;
-    &::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 40%;
-        background: url('#{$img-path}/dots.png') no-repeat center;
-        background-size: 45%;
-        z-index: 1;
-        position: absolute;
-        bottom: 175px;
-        right: 10px;
+    &__container {
+        padding: 100px 15px 120px;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 40%;
+            background: url('#{$img-path}/dots.png') no-repeat center;
+            background-size: 60%;
+            z-index: 1;
+            position: absolute;
+            bottom: 185px;
+            right: 10px;
+        }
     }
     &__list {
         @include flex (space-around, stretch);
