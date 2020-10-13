@@ -86,30 +86,6 @@ $style: 'our-team';
         &--image {
             border-right: 2px solid $orange-color;
             max-width: calc(50% + 2px);
-
-            position: relative;
-            &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 100px;
-                height: 100px;
-                border-left: 2px solid $orange-color;
-                border-bottom: 2px solid $orange-color;
-                left: 80px;
-                top: 386px;
-            }
-            &::after {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 100px;
-                height: 100px;
-                border-right: 2px solid $orange-color;
-                border-bottom: 2px solid $orange-color;
-                right: 80px;
-                top: 386px;
-            }
         }
     }
     &__img-wrapper {
@@ -154,6 +130,38 @@ $style: 'our-team';
             bottom: 0;
             right: 0; 
         }
+    }
+    &__hiden {
+        max-height: 388px;
+        height: 100%;
+        max-width: 388px;
+        width: 100%;
+        z-index: -1;
+        position: relative;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border-left: 2px solid $orange-color;
+                border-bottom: 2px solid $orange-color;
+                left: -13px;
+                bottom: -15px;
+                z-index: 1;
+            }
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border-right: 2px solid $orange-color;
+                border-bottom: 2px solid $orange-color;
+                right: -13px;
+                bottom: -15px;
+                z-index: 1;
+            }
     }
     &__tm-name {
         @include text ($name-size,900,$main-color);
