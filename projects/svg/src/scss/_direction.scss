@@ -42,13 +42,17 @@ $style: "directions";
         }
     }
     &__title {
-        @include text ($large-text,700,$dark);
+        @include text ($medium-text,700,$dark);
 
         position: absolute;
         top: -20px;
 
+        text-align: center;
         text-transform: uppercase;
         letter-spacing: 8.95px;
+        @media screen and (min-width: 620px) {
+            font-size: $large-text;
+        }
     }
     &__icon-wrapper {
         margin-bottom: 30px;
@@ -56,6 +60,7 @@ $style: "directions";
     &__name {
         @include text ($small-titles,700,$dark);
         
+        text-align: center;
         text-transform: uppercase;
         letter-spacing: 5.26px;
 

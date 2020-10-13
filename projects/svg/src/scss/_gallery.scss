@@ -53,15 +53,21 @@ $style: "gallery";
         }
     }
     &__item-name {
-        @include text ($large-text,700,$white);
+        @include text ($small-text,700,$white);
 
         text-transform: uppercase;
-        letter-spacing: 8.95px;
-
+        
         position: absolute;
         bottom: 25px;
         left: 25px;
 
         transition: all 0.4s ease;
+        @media screen and (min-width: 620px) {
+            font-size: $small-titles;
+        }
+        @media screen and (min-width: 920px) {
+            font-size: $large-text;
+            letter-spacing: 8.95px;
+        }
     }
 }

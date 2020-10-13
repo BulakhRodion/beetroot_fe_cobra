@@ -1,5 +1,6 @@
 $style: 'booking-recomendation';
 .#{$style} {
+    background-color: orange;
     &__row {
         display: flex;
         align-items: flex-end;

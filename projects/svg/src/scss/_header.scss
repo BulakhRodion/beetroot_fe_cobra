@@ -12,16 +12,97 @@ $style: "header";
     background-position: center;
     object-fit: cover;
     &__logo-wrapper {
+        position: relative;
+        width: 69px;
+        height: 69px;
         margin-bottom: 78px;
     }
+    &__link {
+        &:hover > .header__link-circle {
+            stroke: $dark;
+        }
+        &:hover > .header__link-triangle {
+            stroke: $dark;
+        }
+        &:hover > .header__link-dot {
+            fill: $dark;
+        }
+    }
+    &__link-circle {
+        position: absolute;
+        stroke: $white;
+        fill: transparent;
+        stroke-dasharray: 210;
+        stroke-dashoffset: 210;
+        animation: svgDraw 4s linear forwards;
+        @include transition (stroke);
+        @keyframes svgDraw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+    }
+    &__link-triangle {
+        position: absolute;
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        stroke: $white;
+        fill: transparent;
+        stroke-dasharray: 210;
+        stroke-dashoffset: 210;
+        animation: svgDraw 4s linear forwards;
+        animation-delay: 1s;
+        @include transition (stroke);
+        @keyframes svgDraw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    }
+    &__link-dot {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(35%);
+        fill: $white;
+        opacity: 0;
+        animation: dotAppear 2s forwards;
+        animation-delay: 3s;
+        @include transition (fill);
+        @keyframes dotAppear {
+            to {
+                opacity: 1;
+            }
+        }
+        &--middle {
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            animation-delay: 3.5s;
+        }
+        &--end {
+            bottom: 0;
+            left: 100%;
+            transform: translate(-135%);
+            animation-delay: 1s;
+        }
+    }
     &__title {
-        @include text ($title-size,700,$white);
+        @include text ($medium-text,700,$white);
 
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 8.62px;
 
         margin-bottom: 30px;
+        @media screen and (min-width: 620px) {
+            font-size: $large-text;
+        }
+        @media screen and (min-width: 620px) {
+            font-size: $title-size;
+        }
     }
     &__subtitle {
         @include text ($subtitle-size,400,$white);

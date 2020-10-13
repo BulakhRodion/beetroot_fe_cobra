@@ -2,7 +2,7 @@ $style: 'header';
 .#{$style} {
     min-height: 100vh;
 
-    background: url('#{$img-path}/first-bckg.png') no-repeat center;
+    background: blue url('#{$img-path}/first-bckg.png') no-repeat center;
     background-size: cover;
     &__container {
         @include flex (center,center,column);

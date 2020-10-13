@@ -77,13 +77,16 @@ $style: "description";
         }
     }
     &__part-title {
-        @include text ($large-text,700,$dark);
+        @include text ($medium-text,700,$dark);
         
         text-transform: uppercase;
         letter-spacing: 8.95px;
 
         position: absolute;
         top: -20px;
+        @media screen and (min-width: 620px) {
+            font-size: $large-text;
+        }
         &--white {
             color: $white;
         }

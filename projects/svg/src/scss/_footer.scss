@@ -24,34 +24,44 @@ $style: 'footer';
             content: " ";
             position: absolute;
 
-            width: 25%;
+            width: 15%;
             background-color: $dark;
             height: 2px;
 
             left: 0;
             top: 0;
+            @media screen and (min-width: 640px) {
+                width: 25%;
+            }
         }
         &::after {
             content: " ";
             position: absolute;
 
-            width: 25%;
+            width: 15%;
             background-color: $dark;
             height: 2px;
 
             right: 0;
             top: 0;
+            @media screen and (min-width: 640px) {
+                width: 25%;
+            }
         }
     }
 
     &__title {
-        @include text ($contact-text,700,$dark);
+        @include text ($medium-text,700,$dark);
         
         text-transform: uppercase;
         letter-spacing: 8.95px;
+        text-align: center;
 
         position: absolute;
         top: -18px;
+        @media screen and (min-width: 620px) {
+            font-size: $contact-text;
+        }
     }
     &__text {
         @include text ($medium-text,300,$dark);
@@ -63,7 +73,8 @@ $style: 'footer';
         margin-bottom: 28px;
     }
     &__link-wrapper {
-        width: 396px;
+        width: 100%;
+        max-width: 396px;
         height: 60px;
 
         background-color: $dark;
