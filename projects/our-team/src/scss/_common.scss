@@ -13,9 +13,25 @@ ul {
 a {
     color: inherit;
     text-decoration: none;
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 .container {
+    @include flex (center, center,column);
+    width: 100%;
     max-width: 1180px;
     padding: 0 15px;
     margin: auto;
+}
+.uk-slidenav {
+    color: $orange-color;
+    transition: color 0.4s ease;
+    &:hover {
+        color: darken($color: $orange-color, $amount: 15%)
+    }
+    &:focus {
+        color: darken($color: $orange-color, $amount: 15%)
+    }
 }

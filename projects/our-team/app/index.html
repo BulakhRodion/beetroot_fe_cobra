@@ -5,53 +5,130 @@
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
 	<title>our-team</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<section class="our-team container">
-		<h3 class="our-team__subtitle">THE GENIUSES BEHIND OUR WORK</h3>
-		<h1 class="our-team__title">OUR TEAM</h1>
-		<div class="our-team__icon-wrapper">
-			<img src="./img/icon.png" alt="bonfire">
-		</div>
-		<div class="our-team__row">
-			<div class="our-team__col our-team__col--image">
-				<div class="our-team__img-wrapper">
-					<div class="our-team__hiden"></div>
-					<img src="./img/team-member.png" alt="team-member">
-				</div>
+	<section class="our-team">
+		<div class="container">
+			<h3 class="our-team__subtitle">THE GENIUSES BEHIND OUR WORK</h3>
+			<h1 class="our-team__title">OUR TEAM</h1>
+			<div class="our-team__icon-wrapper">
+				<img src="./img/icon.png" alt="bonfire" class="our-team__icon">
 			</div>
-			<div class="our-team__col">
-				<h2 class="our-team__tm-name">Sahariar Kabir</h2>
-				<h3 class="our-team__tm-activity">Frontend Developer</h3>
-				<ul class="our-team__list">
-					<li class="our-team__list-item">
-						<a href="#"><i class="fab fa-facebook-f"></i></a>
+			<div class="uk-position-relative uk-visible-toggle our-team__row" tabindex="-1" uk-slider="center: true">
+				<ul class="uk-slider-items our-team__slider">
+					<li class="uk-width-1-1">
+						<div class="our-team__row-inner">
+							<div class="our-team__col our-team__col--image">
+								<div class="our-team__img-wrapper">
+									<div class="our-team__hiden"></div>
+									<img src="./img/team-member.png" alt="team-member" class="our-team__img">
+								</div>
+							</div>
+							<div class="our-team__col">
+								<h2 class="our-team__tm-name">Sahariar Kabir</h2>
+								<h3 class="our-team__tm-activity">Frontend Developer</h3>
+								<ul class="our-team__list">
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-facebook-f"></i></a>
+									</li>
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-twitter"></i></a>
+									</li>
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-google-plus-g"></i></a>
+									</li>
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-linkedin-in"></i></a>
+									</li>
+								</ul>
+								<p class="our-team__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dui sit amet ligula efficitur, sit amet lacinia massa dictum. Etiam accumsan felis a nunc facilisis, ut euismod lacus placerat. Praesent rutrum eget massa a convallis. Nam vitae augue malesuada, accumsan mauris ut, consectetur.</p>
+								<div class="our-team__link-wrapper">
+									<a href="#" class="our-team__link">VIEW PROFILE</a>
+								</div>
+							</div>
+						</div>
 					</li>
-					<li class="our-team__list-item">
-						<a href="#"><i class="fab fa-twitter"></i></a>
+					<li class="uk-width-1-1">
+						<div class="our-team__row-inner">
+							<div class="our-team__col our-team__col--image">
+								<div class="our-team__img-wrapper">
+									<div class="our-team__hiden"></div>
+									<img src="./img/why.jpg" alt="team-member" class="our-team__img">
+								</div>
+							</div>
+							<div class="our-team__col">
+								<h2 class="our-team__tm-name">Sahariar Kabir</h2>
+								<h3 class="our-team__tm-activity">Frontend Developer</h3>
+								<ul class="our-team__list">
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-facebook-f"></i></a>
+									</li>
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-twitter"></i></a>
+									</li>
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-google-plus-g"></i></a>
+									</li>
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-linkedin-in"></i></a>
+									</li>
+								</ul>
+								<p class="our-team__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dui sit amet ligula efficitur, sit amet lacinia massa dictum. Etiam accumsan felis a nunc facilisis, ut euismod lacus placerat. Praesent rutrum eget massa a convallis. Nam vitae augue malesuada, accumsan mauris ut, consectetur.</p>
+								<div class="our-team__link-wrapper">
+									<a href="#" class="our-team__link">VIEW PROFILE</a>
+								</div>
+							</div>
+						</div>
 					</li>
-					<li class="our-team__list-item">
-						<a href="#"><i class="fab fa-google-plus-g"></i></a>
-					</li>
-					<li class="our-team__list-item">
-						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					<li class="uk-width-1-1">
+						<div class="our-team__row-inner">
+							<div class="our-team__col our-team__col--image">
+								<div class="our-team__img-wrapper">
+									<div class="our-team__hiden"></div>
+									<img src="./img/enough.jpg" alt="team-member" class="our-team__img">
+								</div>
+							</div>
+							<div class="our-team__col">
+								<h2 class="our-team__tm-name">Sahariar Kabir</h2>
+								<h3 class="our-team__tm-activity">Frontend Developer</h3>
+								<ul class="our-team__list">
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-facebook-f"></i></a>
+									</li>
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-twitter"></i></a>
+									</li>
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-google-plus-g"></i></a>
+									</li>
+									<li class="our-team__list-item">
+										<a href="#" class="our-team__list-item-link"><i class="fab fa-linkedin-in"></i></a>
+									</li>
+								</ul>
+								<p class="our-team__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dui sit amet ligula efficitur, sit amet lacinia massa dictum. Etiam accumsan felis a nunc facilisis, ut euismod lacus placerat. Praesent rutrum eget massa a convallis. Nam vitae augue malesuada, accumsan mauris ut, consectetur.</p>
+								<div class="our-team__link-wrapper">
+									<a href="#" class="our-team__link">VIEW PROFILE</a>
+								</div>
+							</div>
+						</div>
 					</li>
 				</ul>
-				<p class="our-team__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dui sit amet ligula efficitur, sit amet lacinia massa dictum. Etiam accumsan felis a nunc facilisis, ut euismod lacus placerat. Praesent rutrum eget massa a convallis. Nam vitae augue malesuada, accumsan mauris ut, consectetur.</p>
-				<div class="our-team__link-wrapper">
-					<a href="#" class="our-team__link">VIEW PROFILE</a>
-				</div>
+				<a class="uk-position-center-left uk-position-small uk-slidenav-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    			<a class="uk-position-center-right uk-position-small uk-slidenav-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
 			</div>
-		</div>
-		<div class="our-team__bullets">
-			<input type="radio" name="number" value="first-slide" class="our-team__bullets-item">
-			<input type="radio" name="number" value="second-slide" class="our-team__bullets-item" checked>
-			<input type="radio" name="number" value="third-slide" class="our-team__bullets-item">
+			<div class="our-team__bullets">
+				<input type="radio" name="number" value="first-slide" class="our-team__bullets-item">
+				<input type="radio" name="number" value="second-slide" class="our-team__bullets-item" checked>
+				<input type="radio" name="number" value="third-slide" class="our-team__bullets-item">
+			</div>
 		</div>
 	</section>
 
 	<script src="https://kit.fontawesome.com/adcbd3fc4f.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit-icons.min.js"></script>
 	<script src="js/bundle.js"></script>
 </body>
 </html>
