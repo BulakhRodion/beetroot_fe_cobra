@@ -46,11 +46,11 @@ $style: 'our-team';
     }
     &__row {
         width: 100%;
-
-        margin-bottom: 16px;
     }
     &__row-inner {
         @include flex ();
+
+        margin-bottom: 16px;
     }
     &__col {
         @include flex (center,center,column);
@@ -245,14 +245,16 @@ $style: 'our-team';
     }
     &__bullets {
         @include flex (center,center);
+        padding: 0;
+        margin: 0;
     }
     &__bullets-item {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
         
         border: 2px solid $orange-color;
         border-radius: 50%;
@@ -262,9 +264,6 @@ $style: 'our-team';
         cursor: pointer;
         
         margin-right: 8px;
-        &:checked {
-            background-color: #ffffff;
-        }
         &:last-child {
             margin-right: 0;
         }
