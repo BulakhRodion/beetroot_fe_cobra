@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100vh;
+    font-size: 100%;
+}
+body {
+    font-family: $main-font;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.sushi-title {
+    @include text($H580, 700, $white);
+    text-transform: uppercase;
+}
+.sushi-text {
+    @include text($H230, 400, $white);
+}

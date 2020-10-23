@@ -1,0 +1,44 @@
+$style: 'nav';
+.#{$style} {
+    background-color: rgba($color: $peach, $alpha: 0.8);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 15px 0 30px;
+    z-index: 10;
+    &__container {
+        @include flex(space-between, center);
+    }
+    &__logo-link {
+        &:hover > .nav__logo {
+            transform: scale(1.15);
+        }
+    }
+    &__logo {
+        @include transition(transform);
+    }
+    &__list {
+        @include flex();
+    }
+    &__list-item {
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        @include text($H250, 700, $white);
+        text-transform: uppercase;
+        @include transition(color);
+        &:hover {
+            color: darken($color: $peach, $amount: 10%);
+        }
+    }
+    &__search {
+        cursor: pointer;
+        @include transition(transform);
+        &:hover {
+            transform: scale(1.4);
+        }
+    }
+}

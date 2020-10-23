@@ -1,0 +1,59 @@
+$style: 'header';
+.#{$style} {
+    padding: 150px 0 100px;
+    min-height: 100vh;
+    background: $peach url('../../img/sushi-first-bg.svg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $peach, $alpha: 0.6);
+        pointer-events: none;
+    }
+    &__container {
+        @include flex(center, flex-start, column);
+        height: 636px;
+    }
+    &__title {
+        max-width: 436px;
+        z-index: 1;
+        margin-bottom: 42px;
+    }
+    &__text {
+        max-width: 580px;
+        z-index: 1;
+        margin-bottom: 50px;
+    }
+    &__link-wrapper {
+        height: 66px;
+        width: 100%;
+        max-width: 324px;
+
+        border-radius: 76px / 56px;
+        background-color: $white;
+        z-index: 1;
+        @include transition(border-radius);
+        &:hover {
+            border-radius: 150px / 56px;
+        }
+        &:hover > .header__link {
+            letter-spacing: 5px;
+            color: darken($color: $peach, $amount: 10%);
+        }
+    }
+    &__link {
+        width: 100%;
+        height: 100%;
+        @include flex(center, center);
+
+        border-radius: 76px / 56px;
+        @include text($H230, 700, $peach);
+        text-transform: uppercase;
+        @include transition(letter-spacing, color);
+    }
+}
